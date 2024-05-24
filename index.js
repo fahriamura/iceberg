@@ -36,7 +36,7 @@ async function startFarm(initData) {
       { headers }
     );
     console.log(response.data);
-    await axios.delete('https://0xiceberg.com/api/v1/web-app/farming/collect/',Headers)
+    await axios.delete('https://0xiceberg.com/api/v1/web-app/farming/collect/',{headers})
     setTimeout(() => getBalance(headers), 1000); // Ensure headers are passed
   } catch (error) {
     console.log('Error during start farming:', error.response ? error.response.data : error.message);
